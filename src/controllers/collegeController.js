@@ -75,7 +75,7 @@ const collegeDetails = async function (req, res) {
   //-----------------------------finding the intern document with the college document id]-----------------------------------------
 
   let internDetails = await internModel.find({ collegeId: collegeDetails._id }).select({ name: 1, email: 1, mobile: 1, _id: 1 });
-  res.send({internDetails})
+
   if (internDetails.length==0) { return res.status(400).send({ status: false, msg: "No intern has applied for this college" }) }
 
   let result = {
