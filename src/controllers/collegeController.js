@@ -84,7 +84,7 @@ const collegeDetails = async function (req, res) {
     logoLink: collegeDetails.logoLink,
     interns: internDetails,
   };
-  // res.status(200).send({ status: true, data: result });
+  res.status(200).send({ status: true, data: result });
 };
 
 module.exports = { createCollege, collegeDetails };
